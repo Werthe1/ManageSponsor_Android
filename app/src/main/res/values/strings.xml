@@ -1,3 +1,8 @@
 <resources>
     <string name = "app_name">ManageSponsor</string>
+    
+    <!--bottom navi-->
+    <string name = "action_agreement">약정</string>
+    <string name = "action_schedule">일정</string>
+    <string name = "action_log">로그</string>
 </resources>
