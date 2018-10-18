@@ -7,6 +7,11 @@
         <item name = "colorPrimary">@color/colorPrimary</item>
         <item name = "colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name = "colorAccent">@color/colorAccent</item>
+        <item name="android:itemTextAppearance">@style/BotNaviTextAppearance</item>
     </style>
 
+    <style name = "BotNaviTextAppearance">
+        <item name = "android:fontFamily">@font/kopub_dotum_mid</item>
+        <item name = "android:textSize">13sp</item>
+    </style>
 </resources>
