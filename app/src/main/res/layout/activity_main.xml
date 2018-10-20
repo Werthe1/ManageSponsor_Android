@@ -13,13 +13,13 @@
             />
     </data>
     
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width = "match_parent"
         android:layout_height = "match_parent"
         tools:context = ".MainActivity"
         >
         
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
             android:id = "@+id/toolbar_main"
             android:layout_width = "match_parent"
             android:layout_height = "?android:attr/actionBarSize"
@@ -36,7 +36,7 @@
             app:layout_constraintTop_toBottomOf = "@+id/toolbar_main"
             />
         
-        <android.support.design.widget.BottomNavigationView
+        <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id = "@+id/bnv_main"
             android:layout_width = "match_parent"
             android:layout_height = "wrap_content"
@@ -49,5 +49,5 @@
             app:onNavigationItemSelected = "@{viewModel::onNavigationClick}"
             />
     
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

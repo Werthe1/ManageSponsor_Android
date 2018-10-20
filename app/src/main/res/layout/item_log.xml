@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    >
+    
+    <data>
+        
+        <variable
+            name = "log"
+            type = "jiyun.com.managesponsor.data.BankLog"
+            />
+    </data>
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width = "match_parent"
+        android:background="@android:color/white"
+        android:layout_height = "wrap_content"
+        android:layout_marginBottom = "1dp"
+        android:padding = "9dp"
+        >
+        
+        <TextView
+            android:id = "@+id/text_log_name"
+            android:layout_width = "wrap_content"
+            android:text="@{log.sponsorName}"
+            android:layout_height = "wrap_content"
+            android:fontFamily = "@font/kopub_dotum_mid"
+            android:textColor = "@color/colorDefaultText"
+            android:textSize = "15sp"
+            tools:text = "이지윤"
+            />
+        
+        <TextView
+            android:id = "@+id/text_log_state"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:fontFamily = "@font/kopub_dotum_bold"
+            android:textColor = "@{log.stateCode != 2 ? (log.stateCode == 1 ?@color/colorStandard : @color/colorErr) : @color/colorRequest}"
+            android:textSize = "14sp"
+            android:text="@{log.state}"
+            android:textStyle = "bold"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            tools:text = "정상"
+            />
+        
+        <TextView
+            android:id = "@+id/text_log_purpose"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:paddingTop="10dp"
+            android:fontFamily = "@font/kopub_dotum_light"
+            android:textColor = "@color/colorDefaultText"
+            android:textSize = "13sp"
+            android:text="@{log.donationPurpose}"
+            app:layout_constraintTop_toBottomOf = "@+id/text_log_name"
+            tools:text = "성공회대학교 기부지원금 소프트웨어공학 발전기금"
+            />
+        
+        <TextView
+            android:id = "@+id/text_log_agree_id"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:paddingTop="7dp"
+            android:text="@{String.format(@string/agreement_id, log.agreementId)}"
+            android:fontFamily = "@font/kopub_dotum_light"
+            android:textColor = "#3a3a3a"
+            android:textSize = "12sp"
+            app:layout_constraintTop_toBottomOf = "@+id/text_log_purpose"
+            tools:text = "약정번호 : 20150515215-11"
+            />
+        
+        <TextView
+            android:id = "@+id/text_log_write_date"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text="@{log.writeDate}"
+            android:fontFamily = "@font/montserrat_light"
+            android:textColor = "@color/colorGrey"
+            android:textSize = "12sp"
+            android:layout_marginTop="3dp"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@+id/text_log_agree_id"
+            tools:text = "2018.09.20"
+            />
+    
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

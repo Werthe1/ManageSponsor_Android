@@ -5,4 +5,31 @@
     <string name = "action_agreement">약정</string>
     <string name = "action_schedule">일정</string>
     <string name = "action_log">로그</string>
+    
+    <!--agreement-->
+    <string name = "pay_period">납입 기간 : &#160;</string>
+    <string name = "pay_day">납입일 : %d</string>
+    <string name = "pay_duration">%s ~ %s</string>
+
+    <!--agree detail-->
+    <string name="sponsor_name">회원명</string>
+    <string name="agree_id">약정 번호</string>
+    <string name="agree_period">약정 기간</string>
+    <string name="pay_month_day">월 납입일</string>
+    <string name="agree_purpose">기부목적</string>
+    <string name="pay_way">납입 방법</string>
+    <string name="pay_month_money">월 납입액</string>
+    <string name="account_info">계좌 정보</string>
+    <string name="etc">비고</string>
+    
+    <!--log-->
+    <string name = "request">신청</string>
+    <string name = "standard">정상</string>
+    <string name = "error">에러</string>
+    <string name = "agreement_id">약정번호 : %s</string>
+    
+    <!--detail-->
+    <string name = "alert_month">매 월</string>
+    <string name = "alert_year">매 년</string>
+    <string name = "alert_once">안 함</string>
 </resources>

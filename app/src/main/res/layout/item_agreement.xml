@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    >
+    
+    <data>
+        
+        <variable
+            name = "agree"
+            type = "jiyun.com.managesponsor.data.Agreement"
+            />
+    </data>
+    
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_marginBottom = "1dp"
+        android:background = "@android:color/white"
+        android:paddingBottom = "5dp"
+        android:paddingEnd = "7dp"
+        android:paddingStart = "7dp"
+        android:paddingTop = "10dp"
+        >
+        
+        <TextView
+            android:id = "@+id/text_agree_name"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:fontFamily = "@font/kopub_dotum_mid"
+            android:text = "@{agree.sponsorName}"
+            android:textColor = "@color/colorDefaultText"
+            android:textSize = "15sp"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            tools:text = "이지윤"
+            />
+        
+        <TextView
+            android:id = "@+id/text_agree_pay_date"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:fontFamily = "@font/kopub_dotum_light"
+            android:text = "@{String.format(@string/pay_day, agree.payDay)}"
+            android:textSize = "12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text = "납입일 : 20일"
+            />
+        
+        <TextView
+            android:id = "@+id/text_agree_end_title"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:gravity="center"
+            android:textSize="12sp"
+            app:layout_constraintTop_toTopOf="@+id/text_agree_period"
+            app:layout_constraintBottom_toBottomOf="@+id/text_agree_period"
+            android:fontFamily = "@font/montserrat_light"
+            android:textColor="@color/colorGrey"
+            android:text = "@string/pay_period"
+            />
+        
+        <TextView
+            endDate = "@{agree.endDate}"
+            startDate = "@{agree.startDate}"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:id="@+id/text_agree_period"
+            android:fontFamily = "@font/montserrat_light"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor = "@color/colorDefaultText"
+            app:layout_constraintTop_toBottomOf = "@+id/text_agree_name"
+            app:layout_constraintStart_toEndOf = "@+id/text_agree_end_title"
+            tools:text = "2018.05.15 ~ 2018.10.17"
+            />
+    
+    <TextView
+        app:layout_constraintStart_toEndOf="@+id/text_agree_period"
+        android:textColor="@color/colorErr"
+        tools:text="만료 3일 전"
+        android:text="만료 3일 전"
+        android:textSize="12sp"
+        android:fontFamily="@font/kopub_dotum_mid"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_agree_period"
+        app:layout_constraintTop_toTopOf="@+id/text_agree_period"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
