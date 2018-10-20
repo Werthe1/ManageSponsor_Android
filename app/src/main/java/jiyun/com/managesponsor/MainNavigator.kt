@@ -1,6 +1,6 @@
 package jiyun.com.managesponsor
 
-import android.support.v4.app.FragmentManager
+import androidx.fragment.app.FragmentManager
 
 interface MainNavigator {
 
