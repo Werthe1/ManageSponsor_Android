@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    >
+    
+   
+    
+    <font
+        android:font = "@font/kopub_dotum_light"
+        android:fontStyle = "normal"
+        />
+    
+    <font
+        app:font = "@font/kopub_dotum_light"
+        app:fontStyle = "normal"
+        />
+    
+    
+    <font
+        android:font = "@font/kopub_dotum_mid"
+        android:fontStyle = "normal"
+        />
+    
+    <font
+        app:font = "@font/kopub_dotum_light"
+        app:fontStyle = "normal"
+        />
+    
+    <font
+        android:font = "@font/kopub_dotum_bold"
+        android:fontStyle = "normal"
+        />
+    
+    <font
+        app:font = "@font/kopub_dotum_bold"
+        app:fontStyle = "normal"
+        />
+</font-family>
