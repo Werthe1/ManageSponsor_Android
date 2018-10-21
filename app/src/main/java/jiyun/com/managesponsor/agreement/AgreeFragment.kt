@@ -5,23 +5,21 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.R.attr.layoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import jiyun.com.managesponsor.R
 import jiyun.com.managesponsor.data.Agreement
-import jiyun.com.managesponsor.databinding.FragmentAgreeBinding
+import jiyun.com.managesponsor.databinding.AgreeFragBinding
 import java.util.*
 
 class AgreeFragment : Fragment() {
 
-    private lateinit var binding: FragmentAgreeBinding
+    private lateinit var binding: AgreeFragBinding
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_agree, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.agree_frag, container, false)
 
         return binding.root
     }
@@ -31,6 +29,7 @@ class AgreeFragment : Fragment() {
 
         initRecyclerVIew()
     }
+
 
     private fun initRecyclerVIew() {
         binding.recyclerAgree.apply {

@@ -1,24 +1,25 @@
 package jiyun.com.managesponsor.schedule
 
-import android.databinding.DataBindingUtil
+
 import android.os.Bundle
-import androidx.core.app.Fragment
-import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import jiyun.com.managesponsor.R
 import jiyun.com.managesponsor.data.Schedule
-import jiyun.com.managesponsor.databinding.FragmentScheduleBinding
+import jiyun.com.managesponsor.databinding.ScheduleFragBinding
 import java.util.*
 
 class ScheduleFragment : Fragment() {
 
-    private lateinit var binding: FragmentScheduleBinding
+    private lateinit var binding: ScheduleFragBinding
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_schedule, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.schedule_frag, container, false)
 
         return binding.root
     }

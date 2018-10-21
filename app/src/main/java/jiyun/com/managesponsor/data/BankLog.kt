@@ -11,4 +11,4 @@ class BankLog (
     var donationPurpose: String = "", //기부목적
     var sponsorName : String="" //회원명
 
-})
+)

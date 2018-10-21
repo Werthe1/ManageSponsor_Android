@@ -1,7 +1,8 @@
 package jiyun.com.managesponsor.util
 
-import androidx.core.app.Fragment
-import androidx.core.app.FragmentManager
+
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import jiyun.com.managesponsor.R
 
 

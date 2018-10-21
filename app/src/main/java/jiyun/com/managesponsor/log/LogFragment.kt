@@ -11,17 +11,17 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import jiyun.com.managesponsor.R
 import jiyun.com.managesponsor.data.BankLog
-import jiyun.com.managesponsor.databinding.FragmentLogBinding
+import jiyun.com.managesponsor.databinding.LogFragBinding
 import java.util.*
 
 
 class LogFragment : Fragment() {
 
-    private lateinit var binding: FragmentLogBinding
+    private lateinit var binding: LogFragBinding
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_log, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.log_frag, container, false)
 
         return binding.root
     }
