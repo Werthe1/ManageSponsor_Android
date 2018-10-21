@@ -36,7 +36,7 @@
         <item name="layout_constraintStart_toStartOf">@+id/gl_title_end</item>
         <item name="layout_constraintEnd_toEndOf">@+id/gl_content_end</item>
         <item name="android:fontFamily">@font/kopub_dotum_light</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">13sp</item>
         <item name="android:gravity">left</item>
         <item name="android:textColor">@color/colorDefaultText</item>
         <item name="android:layout_height">wrap_content</item>

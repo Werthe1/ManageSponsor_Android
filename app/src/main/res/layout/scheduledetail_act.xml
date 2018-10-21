@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_light"
             android:gravity="center"
-            android:text="날짜를 선택해 주세요."
+            android:text="@string/hint_date"
             android:textColor="@color/colorDefaultText"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -37,12 +37,13 @@
             tools:text="2018.10.15" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:src="@drawable/ic_schedule_24px"
-            app:layout_constraintStart_toEndOf="@+id/text_detail_date"
-            app:layout_constraintTop_toTopOf="@+id/text_detail_date" />
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginTop = "8dp"
+            android:padding = "10dp"
+            android:src = "@drawable/ic_weekly_calendar"
+            app:layout_constraintStart_toEndOf = "@+id/text_detail_date"
+            app:layout_constraintTop_toBottomOf = "@+id/text_detail_title" />
 
         <View
             android:id="@+id/view_line_top"
@@ -58,7 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/montserrat_light"
-            android:text="일정을 입력해 주세요."
+            android:text="@string/hint_schedule"
             android:textColor="@color/colorDefaultText"
             android:textSize="13sp"
             app:layout_constraintTop_toBottomOf="@+id/view_line_top" />
@@ -88,7 +89,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="알림 반복 주기를 선택해 주세요"
+            android:text="@string/hint_alert"
             app:layout_constraintTop_toBottomOf="@+id/view_line_bot" />
 
         <Button
