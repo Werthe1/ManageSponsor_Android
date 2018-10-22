@@ -42,4 +42,16 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">0dp</item>
     </style>
+    <style name="TextLogin">
+        <item name = "android:textColor">@android:color/white</item>
+        <item name = "android:textColorHint">@android:color/white</item>
+        <item name = "android:background">#35FFFFFF</item>
+        <item name = "android:fontFamily">@font/kopub_dotum_light</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingEnd">9dp</item>
+        <item name="android:paddingStart">9dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">13sp</item>
+    </style>
 </resources>
