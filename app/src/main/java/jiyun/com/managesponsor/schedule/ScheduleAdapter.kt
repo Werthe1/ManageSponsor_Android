@@ -4,16 +4,18 @@ package jiyun.com.managesponsor.schedule
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import io.reactivex.subjects.PublishSubject
 import jiyun.com.managesponsor.R
 import jiyun.com.managesponsor.data.Schedule
 
 
-class ScheduleAdapter  : RecyclerView.Adapter<ScheduleViewHolder>() {
+class ScheduleAdapter : RecyclerView.Adapter<ScheduleViewHolder>() {
 
     private val dataSet = mutableListOf<Schedule>()
+    val clickSubject = PublishSubject.create<Schedule>()
 
 
-    fun addItems(items : MutableList<Schedule>) {
+    fun addItems(items: MutableList<Schedule>) {
         dataSet.addAll(items)
 
         notifyDataSetChanged()
@@ -26,8 +28,13 @@ class ScheduleAdapter  : RecyclerView.Adapter<ScheduleViewHolder>() {
 
 
     override fun onBindViewHolder(holder: ScheduleViewHolder, position: Int) {
-        holder.binding?.schedule = dataSet[position]
+        holder.apply {
+            dataSet[position].also {
+                binding?.schedule = it
+                getClickObservable(it).subscribe(clickSubject)
+            }
+        }
     }
 
-    override fun getItemCount(): Int  = dataSet.size
+    override fun getItemCount(): Int = dataSet.size
 }
