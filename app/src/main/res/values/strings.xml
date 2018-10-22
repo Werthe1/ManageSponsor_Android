@@ -60,5 +60,5 @@
     <string name = "hint_alert">알람 주기를 선택해 주세요.</string>
 
     <!--main-->
-    <string name = "setting">설정</string>
+    <string name="setting">설정</string>
 </resources>

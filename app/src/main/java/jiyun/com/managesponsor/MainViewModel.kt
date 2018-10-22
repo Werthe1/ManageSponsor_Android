@@ -19,24 +19,28 @@ import jiyun.com.managesponsor.util.replaceFragmentToActivity
 )
 
 
-class MainViewModel(val context: MainNavigator) {
+class MainViewModel(val navi: MainNavigator) {
 
     fun onNavigationClick(item: MenuItem): Boolean =
             when (item.itemId) {
                 R.id.action_agreement -> {
-                    replaceFragmentToActivity(context.getSupportFragmentManager(), AgreeFragment())
+                    replaceFragmentToActivity(navi.getSupportFragmentManager(), AgreeFragment())
+                    navi.applyToolbarTitle(R.string.action_agreement)
                     true
                 }
                 R.id.action_schedule -> {
-                    replaceFragmentToActivity(context.getSupportFragmentManager(), ScheduleFragment())
+                    replaceFragmentToActivity(navi.getSupportFragmentManager(), ScheduleFragment())
+                    navi.applyToolbarTitle(R.string.action_schedule)
                     true
                 }
                 R.id.action_log -> {
-                    replaceFragmentToActivity(context.getSupportFragmentManager(), LogFragment())
+                    replaceFragmentToActivity(navi.getSupportFragmentManager(), LogFragment())
+                    navi.applyToolbarTitle(R.string.action_log)
                     true
                 }
                 else -> {
-                    replaceFragmentToActivity(context.getSupportFragmentManager(), ScheduleFragment())
+                    replaceFragmentToActivity(navi.getSupportFragmentManager(), ScheduleFragment())
+                    navi.applyToolbarTitle(R.string.action_schedule)
                     true
                 }
             }
