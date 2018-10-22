@@ -36,7 +36,13 @@ class MainActivity : AppCompatActivity() , MainNavigator{
     private fun initToolbar() {
         setSupportActionBar(binding.toolbarMain)
         supportActionBar?.apply {
-            setDisplayShowTitleEnabled(false)
+            title = getString(R.string.action_schedule)
+        }
+    }
+
+    override fun applyToolbarTitle(titleId : Int) {
+        supportActionBar?.apply {
+            setTitle(titleId)
         }
     }
 
