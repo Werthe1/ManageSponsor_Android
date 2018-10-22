@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name = "today"
+            type = "java.util.Date" />
+
+        <variable
+            name = "viewModel"
+            type = "jiyun.com.managesponsor.scheduledetail.ScheduleDetailFragment" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "500dp"
+        android:background = "@android:color/white">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id = "@+id/gl_sche_detail_start"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:orientation = "vertical"
+            app:layout_constraintGuide_percent = "0.05" />
+
+
+        <TextView
+            android:id = "@+id/text_detail_title"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginTop = "10dp"
+            android:fontFamily = "@font/montserrat_light"
+            android:gravity = "center"
+            android:text = "@string/hint_date"
+            android:textColor = "@color/colorDefaultText"
+            android:textSize = "13sp"
+            app:layout_constraintStart_toStartOf = "@+id/gl_sche_detail_start"
+            app:layout_constraintTop_toTopOf = "parent" />
+
+        <View
+            android:layout_width = "0dp"
+            android:layout_height = "5dp"
+            android:background = "@drawable/background_square"
+            app:layout_constraintBottom_toBottomOf = "@+id/text_detail_title"
+            app:layout_constraintEnd_toEndOf = "@+id/text_detail_title"
+            app:layout_constraintStart_toStartOf = "@+id/gl_sche_detail_start"
+            app:layout_constraintTop_toTopOf = "@+id/text_detail_title"
+            app:layout_constraintVertical_bias = "1" />
+
+        <TextView
+            android:id = "@+id/text_detail_date"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginTop = "10dp"
+            android:background = "@drawable/background_schedule"
+            android:fontFamily = "@font/montserrat_medium"
+            android:gravity = "center"
+            android:padding = "7dp"
+            android:text = "@{today}"
+            android:textColor = "@color/colorDefaultText"
+            android:textSize = "15sp"
+            app:layout_constraintStart_toStartOf = "@+id/gl_sche_detail_start"
+            app:layout_constraintTop_toBottomOf = "@+id/text_detail_title"
+            tools:text = "2018.10.15" />
+
+        <ImageView
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginTop = "8dp"
+            android:onClick = "@{() -> viewModel.onCalendarClick()}"
+            android:padding = "10dp"
+            android:src = "@drawable/ic_weekly_calendar"
+            app:layout_constraintStart_toEndOf = "@+id/text_detail_date"
+            app:layout_constraintTop_toBottomOf = "@+id/text_detail_title" />
+
+        <View
+            android:id = "@+id/view_line_top"
+            android:layout_width = "match_parent"
+            android:layout_height = "0.5dp"
+            android:layout_marginTop = "20dp"
+            android:background = "@color/colorGray"
+            app:layout_constraintTop_toBottomOf = "@+id/text_detail_date" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id = "@+id/gl_sche_detail_end"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:orientation = "vertical"
+            app:layout_constraintGuide_percent = "0.95" />
+
+        <EditText
+            android:id = "@+id/edit_detail_input"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:layout_marginTop = "10dp"
+            android:background = "@drawable/background_schedule"
+            android:gravity = "top"
+            android:hint = "@string/hint_schedule"
+            android:lineSpacingExtra = "2dp"
+            android:maxLength = "500"
+            android:minLines = "10"
+            android:padding = "3dp"
+            android:textSize = "13sp"
+            app:layout_constraintEnd_toEndOf = "@+id/gl_sche_detail_end"
+            app:layout_constraintStart_toStartOf = "@+id/gl_sche_detail_start"
+            app:layout_constraintTop_toBottomOf = "@+id/view_line_top" />
+
+        <View
+            android:id = "@+id/view_line_bot"
+            android:layout_width = "match_parent"
+            android:layout_height = "0.5dp"
+            android:layout_marginTop = "20dp"
+            android:background = "@color/colorGray"
+            app:layout_constraintTop_toBottomOf = "@+id/edit_detail_input" />
+
+        <TextView
+            android:id = "@+id/text_detail_title_alert"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginTop = "20dp"
+            android:fontFamily = "@font/kopub_dotum_light"
+            android:text = "@string/hint_alert"
+            android:textColor = "@color/colorDefaultText"
+            android:textSize = "13sp"
+            app:layout_constraintStart_toStartOf = "@+id/gl_sche_detail_start"
+            app:layout_constraintTop_toBottomOf = "@+id/view_line_bot" />
+
+
+        <View
+            android:layout_width = "0dp"
+            android:layout_height = "5dp"
+            android:background = "@drawable/background_square"
+            app:layout_constraintBottom_toBottomOf = "@+id/text_detail_title_alert"
+            app:layout_constraintEnd_toEndOf = "@+id/text_detail_title_alert"
+            app:layout_constraintStart_toStartOf = "@+id/gl_sche_detail_start"
+            app:layout_constraintTop_toTopOf = "@+id/text_detail_title_alert"
+            app:layout_constraintVertical_bias = "1" />
+
+        <!--button-->
+
+        <TextView
+            android:id = "@+id/btn_detail_once"
+            style = "@style/BtnAlert"
+            android:background = "@drawable/background_alert_btn"
+            android:text = "@string/alert_once"
+            app:layout_constraintHorizontal_chainStyle = "spread"
+            app:layout_constraintStart_toStartOf = "@+id/gl_sche_detail_start"
+            app:layout_constraintTop_toBottomOf = "@+id/text_detail_title_alert" />
+
+        <TextView
+            android:id = "@+id/btn_detail_month"
+            style = "@style/BtnAlert"
+            android:background = "@drawable/background_alert_btn"
+            android:text = "@string/alert_month"
+            app:layout_constraintEnd_toStartOf = "@+id/btn_detail_year"
+            app:layout_constraintStart_toEndOf = "@+id/btn_detail_once"
+            app:layout_constraintTop_toBottomOf = "@+id/text_detail_title_alert" />
+
+
+        <TextView
+            android:id = "@+id/btn_detail_year"
+            style = "@style/BtnAlert"
+            android:text = "@string/alert_year"
+            app:layout_constraintEnd_toEndOf = "@+id/gl_sche_detail_end"
+            app:layout_constraintStart_toEndOf = "@+id/btn_detail_month"
+            app:layout_constraintTop_toBottomOf = "@+id/text_detail_title_alert" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id = "@+id/gl_sche_detial_half"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:orientation = "vertical"
+            app:layout_constraintGuide_percent = "0.5" />
+
+        <!--Button-->
+        <TextView
+            android:id = "@+id/btn_ok"
+            style = "@style/BtnScheduleDetail"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:background = "@color/colorStandard"
+            android:text = "@string/ok"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toStartOf = "@+id/gl_sche_detial_half"
+            app:layout_constraintStart_toStartOf = "parent" />
+
+        <TextView
+            android:id = "@+id/btn_cancel"
+            style = "@style/BtnScheduleDetail"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:background = "#3a3a3a"
+            android:text = "@string/cancel"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toEndOf = "@+id/gl_sche_detial_half" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
