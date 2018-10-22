@@ -46,19 +46,25 @@
     <string name = "permission_denied">권한이 거부되었습니다.</string>
 
     <!--log-->
-    <string name = "request">신청</string>
-    <string name = "standard">정상</string>
-    <string name = "error">에러</string>
-    <string name = "agreement_id">약정번호 : %s</string>
+    <string name="request">신청</string>
+    <string name="standard">정상</string>
+    <string name="error">에러</string>
+    <string name="agreement_id">약정번호 : %s</string>
 
     <!--schedule detail-->
-    <string name = "alert_month">매 월</string>
-    <string name = "alert_year">매 년</string>
-    <string name = "alert_once">안 함</string>
-    <string name = "hint_date">날짜를 선택해 주세요.</string>
-    <string name = "hint_schedule">일정을 입력해 주세요.</string>
-    <string name = "hint_alert">알람 주기를 선택해 주세요.</string>
+    <string name="alert_month">매 월</string>
+    <string name="alert_year">매 년</string>
+    <string name="alert_once">안 함</string>
+    <string name="hint_date">날짜를 선택해 주세요.</string>
+    <string name="hint_schedule">일정을 입력해 주세요.</string>
+    <string name="hint_alert">알람 주기를 선택해 주세요.</string>
+    <string name = "detail_schedule">일정 상세 정보</string>
+    <string name = "pick_date">%d.%d.%d</string>
 
     <!--main-->
     <string name="setting">설정</string>
+
+    <!--etc-->
+    <string name="ok">확인</string>
+    <string name="cancel">취소</string>
 </resources>
