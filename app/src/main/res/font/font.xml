@@ -35,4 +35,14 @@
         app:font = "@font/kopub_dotum_bold"
         app:fontStyle = "normal"
         />
+
+    <font
+        android:font = "@font/godo_mid"
+        android:fontStyle = "normal"
+        />
+
+    <font
+        app:font = "@font/godo_mid"
+        app:fontStyle = "normal"
+        />
 </font-family>

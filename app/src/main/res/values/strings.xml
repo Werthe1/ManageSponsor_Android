@@ -20,15 +20,30 @@
     <string name = "pay_duration">%s ~ %s</string>
 
     <!--agree detail-->
-    <string name = "sponsor_name">회원명</string>
-    <string name = "agree_id">약정 번호</string>
-    <string name = "agree_period">약정 기간</string>
-    <string name = "pay_month_day">월 납입일</string>
-    <string name = "agree_purpose">기부목적</string>
-    <string name = "pay_way">납입 방법</string>
-    <string name = "pay_month_money">월 납입액</string>
-    <string name = "account_info">계좌 정보</string>
-    <string name = "etc">비고</string>
+    <string name = "title_person">회원 정보</string>
+    <string name = "title_agree">약정 상세</string>
+    <string name = "title_pay">납입 정보</string>
+    <string name = "title_etc">기타</string>
+    <string name = "sponsor_birth">생년월일</string>
+    <string name="sponsor_name">회원명</string>
+    <string name = "sponsor_contact">연락처</string>
+    <string name="agree_id">약정 번호</string>
+    <string name="agree_period">약정 기간</string>
+    <string name="pay_month_day">월 납입일</string>
+    <string name="agree_purpose">기부목적</string>
+    <string name="pay_way">납입 방법</string>
+    <string name="pay_month_money">월 납입액</string>
+    <string name="account_info">납입 계좌</string>
+    <string name="etc">비고</string>
+    <string name="hint_input">내용 입력</string>
+    <string name = "detail_agree">약정 상세 정보</string>
+    <string name = "format_pay_day">%d 일</string>
+    <string name = "format_pay">%,d 원</string>
+    <string name = "wave">~</string>
+    <string name = "rationale_title">권한 요청</string>
+    <string name = "rationale_msg">전화를 걸기 위해 다음 권한이 필요합니다.</string>
+    <string name = "permission_granted">권한이 허용되었습니다.</string>
+    <string name = "permission_denied">권한이 거부되었습니다.</string>
 
     <!--log-->
     <string name = "request">신청</string>

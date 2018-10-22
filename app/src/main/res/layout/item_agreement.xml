@@ -59,7 +59,7 @@
             app:layout_constraintTop_toTopOf="@+id/text_agree_period"
             app:layout_constraintBottom_toBottomOf="@+id/text_agree_period"
             android:fontFamily = "@font/montserrat_light"
-            android:textColor="@color/colorGrey"
+            android:textColor="@color/colorGray"
             android:text = "@string/pay_period"
             />
         
