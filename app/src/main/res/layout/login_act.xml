@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name = "viewModel"
+            type = "jiyun.com.managesponsor.login.LoginActivity"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width = "match_parent"
+        android:id="@+id/con_login"
+        android:layout_height = "match_parent"
+        android:background = "@drawable/gradient_login"
+        tools:context = ".login.LoginActivity">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id = "@+id/gl_login_top"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:orientation = "horizontal"
+            app:layout_constraintGuide_percent = "0.4" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id = "@+id/gl_login_start"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:orientation = "vertical"
+            app:layout_constraintGuide_percent = "0.15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id = "@+id/gl_login_end"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:orientation = "vertical"
+            app:layout_constraintGuide_percent = "0.85" />
+
+        <TextView
+            android:id = "@+id/text_login_id"
+            style = "@style/TextLogin"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:hint = "@string/hint_id"
+            app:layout_constraintEnd_toEndOf = "@+id/gl_login_end"
+            app:layout_constraintStart_toStartOf = "@+id/gl_login_start"
+            app:layout_constraintTop_toBottomOf = "@+id/gl_login_top" />
+
+        <TextView
+            android:id = "@+id/text_login_pwd"
+            style = "@style/TextLogin"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:layout_marginTop = "10dp"
+            android:hint = "@string/hint_pwd"
+            app:layout_constraintEnd_toEndOf = "@+id/gl_login_end"
+            app:layout_constraintStart_toStartOf = "@+id/gl_login_start"
+            app:layout_constraintTop_toBottomOf = "@+id/text_login_id" />
+
+
+        <Button
+            android:id = "@+id/btn_login"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:layout_marginTop = "25dp"
+            android:textSize="14sp"
+            android:text="@string/login"
+            android:onClick="@{viewModel::onLoginBtnClick}"
+            android:fontFamily="@font/montserrat_light"
+            android:background="@drawable/background_login_btn"
+            android:textColor = "@android:color/white"
+            app:layout_constraintEnd_toEndOf = "@+id/gl_login_end"
+            app:layout_constraintStart_toStartOf = "@+id/gl_login_start"
+            app:layout_constraintTop_toBottomOf = "@+id/text_login_pwd" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id = "@+id/gl_login_bot"
+            android:layout_width = "wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.68"
+            android:layout_height = "wrap_content" />
+
+        <View
+            android:id = "@+id/view_line_login"
+            android:layout_width = "0dp"
+            android:layout_height = "0.5dp"
+            android:layout_marginTop = "30dp"
+            android:background = "#ccf4f4f4"
+            app:layout_constraintEnd_toEndOf = "@+id/gl_login_end"
+            app:layout_constraintStart_toStartOf = "@+id/gl_login_start"
+            app:layout_constraintTop_toBottomOf = "@+id/gl_login_bot" />
+
+        <TextView
+            app:layout_constraintEnd_toEndOf="@+id/gl_login_end"
+            app:layout_constraintStart_toStartOf="@+id/gl_login_start"
+            app:layout_constraintTop_toBottomOf="@+id/view_line_login"
+            android:textSize="11sp"
+            android:layout_marginTop="10dp"
+            android:text="@string/login_info"
+            android:fontFamily="@font/kopub_dotum_light"
+            android:textColor="#ccffffff"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

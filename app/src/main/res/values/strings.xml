@@ -1,6 +1,14 @@
 <resources>
     <string name = "app_name">ManageSponsor</string>
 
+    <!--login-->
+    <string name = "login">Log In</string>
+    <string name = "success">Success</string>
+    <string name = "error_eng">Error</string>
+    <string name="hint_id">아이디를 입력해주세요.</string>
+    <string name="hint_pwd">비밀번호를 입력해주세요.</string>
+    <string name = "login_info">성공회대학교 대학발전후원회 업무 알림 시스템</string>
+
     <!--bottom navi-->
     <string name = "action_agreement">약정</string>
     <string name = "action_schedule">일정</string>
