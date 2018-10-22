@@ -47,7 +47,7 @@
             android:fontFamily = "@font/kopub_dotum_light"
             android:gravity = "center"
             android:text = "@{schedule.writer}"
-            android:textColor = "@color/colorGrey"
+            android:textColor = "@color/colorGray"
             android:textSize = "12sp"
             app:layout_constraintBottom_toBottomOf = "@+id/text_schedule_date"
             app:layout_constraintEnd_toEndOf = "parent"
