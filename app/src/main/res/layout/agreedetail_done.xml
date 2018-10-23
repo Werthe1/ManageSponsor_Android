@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="jiyun.com.managesponsor.agreementDetail.AgreeDetailDoneFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_detail_done">
+
+        <TextView
+            android:id="@+id/text_done_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/godo_mid"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:text="@string/title_done"
+            android:textColor="@color/colorDefaultText"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/text_done_explain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kopub_dotum_light"
+            android:gravity="center"
+            android:paddingBottom="15dp"
+            android:text="@string/msg_done"
+            android:textColor="@color/colorGray"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_done_title" />
+
+        <View
+            android:id="@+id/view_done_bot"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/gradient_toolbar"
+            app:layout_constraintTop_toBottomOf="@+id/text_done_explain" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_done_half"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/btn_done_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/godo_mid"
+            android:gravity="center"
+            android:onClick="@{viewModel::onDialogBtnClick}"
+            android:padding="10dp"
+            android:text="@string/ok"
+            android:textColor="#383838"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toStartOf="@+id/gl_done_half"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_done_bot" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@drawable/gradient_toolbar"
+            android:onClick="@{viewModel::onDialogBtnClick}"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_done_cancel"
+            app:layout_constraintEnd_toStartOf="@+id/gl_done_half"
+            app:layout_constraintStart_toStartOf="@+id/gl_done_half"
+            app:layout_constraintTop_toBottomOf="@+id/view_done_bot" />
+
+        <TextView
+            android:id="@+id/btn_done_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/godo_mid"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/cancel"
+            android:textColor="#383838"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gl_done_half"
+            app:layout_constraintTop_toBottomOf="@+id/view_done_bot" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

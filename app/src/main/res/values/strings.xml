@@ -45,6 +45,9 @@
     <string name = "rationale_msg">전화를 걸기 위해 다음 권한이 필요합니다.</string>
     <string name = "permission_granted">권한이 허용되었습니다.</string>
     <string name = "permission_denied">권한이 거부되었습니다.</string>
+    <string name="msg_done">종료한 약정은 후원회 홈페이지에서 확인할 수 있습니다.</string>
+    <string name="title_done">정말 약정을 종료하시겠습니까?</string>
+    <string name="go_expire">종료하기</string>
 
     <!--log-->
     <string name="request">신청</string>

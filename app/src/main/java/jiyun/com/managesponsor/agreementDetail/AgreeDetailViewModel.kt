@@ -1,14 +1,13 @@
 package jiyun.com.managesponsor.agreementDetail
 
-import android.content.Intent
-import android.net.Uri
-import android.os.Build
-import android.view.View
-import jiyun.com.managesponsor.util.startOtherActivity
+class AgreeDetailViewModel(val navi: AgreeDetailNavigator) {
 
-class AgreeDetailViewModel(val navi : AgreeDetailNavigator) {
+    fun onGoExpireClick() {
+       AgreeDetailDoneFragment()
+               .show(navi.getSupportFragmentManager(), "expire")
+    }
 
-    fun onDialClick(phoneNumber : String) {
+    fun onDialClick(phoneNumber: String) {
         navi.preparePhoneCall(phoneNumber)
     }
 }
