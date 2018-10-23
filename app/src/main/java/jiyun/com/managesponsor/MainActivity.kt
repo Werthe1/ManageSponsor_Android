@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() , MainNavigator{
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         binding = DataBindingUtil.setContentView(this, R.layout.main_act)
         binding.viewModel = mViewModel
 

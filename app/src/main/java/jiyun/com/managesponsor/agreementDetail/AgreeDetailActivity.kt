@@ -6,6 +6,7 @@ import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.tedpark.tedpermission.rx2.TedRx2Permission
@@ -23,6 +24,8 @@ class AgreeDetailActivity : AppCompatActivity(), AgreeDetailNavigator {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+
         binding = DataBindingUtil.setContentView(this, R.layout.agreedetail_act)
         binding.apply {
             viewModel = AgreeDetailViewModel(this@AgreeDetailActivity)
