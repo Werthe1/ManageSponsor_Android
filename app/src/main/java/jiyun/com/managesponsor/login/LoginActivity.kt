@@ -22,10 +22,11 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.login_act)
         binding.viewModel = this
+        binding.shimerLogin.startShimmer()
     }
 
 
     fun onLoginBtnClick(view : View) {
-        startOtherActivity(this, MainActivity())
+        startOtherActivity(MainActivity())
     }
 }

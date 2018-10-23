@@ -15,11 +15,12 @@ import jiyun.com.managesponsor.R
 
 fun replaceFragmentToActivity(fragmentManager: FragmentManager, fragment: Fragment) {
     fragmentManager.beginTransaction()
+            .setCustomAnimations(R.anim.fade_in, R.anim.fade_out)
             .replace(R.id.frame_main, fragment)
             .commit()
 }
 
-fun startOtherActivity(context: Context, activity: Activity) {
-    context.startActivity(Intent(context, activity::class.java))
+fun AppCompatActivity.startOtherActivity(activity: Activity) {
+    startActivity(Intent(this, activity::class.java))
 }
 
