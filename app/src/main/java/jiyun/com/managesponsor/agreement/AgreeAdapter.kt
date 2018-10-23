@@ -22,7 +22,7 @@ class AgreeAdapter  : RecyclerView.Adapter<AgreeViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AgreeViewHolder =
             AgreeViewHolder(
                     LayoutInflater.from(parent.context)
-                            .inflate(R.layout.item_agreement, parent, false))
+                            .inflate(R.layout.agree_item, parent, false))
 
 
     override fun onBindViewHolder(holder: AgreeViewHolder, position: Int) {
