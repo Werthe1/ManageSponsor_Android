@@ -18,6 +18,7 @@
     <string name = "pay_period">납입 기간 : &#160;</string>
     <string name = "pay_day">납입일 : %d</string>
     <string name = "pay_duration">%s ~ %s</string>
+    <string name = "expire_cnt">마감까지 %d 일 전</string>
 
     <!--agree detail-->
     <string name = "title_person">회원 정보</string>
@@ -66,5 +67,6 @@
 
     <!--etc-->
     <string name="ok">확인</string>
+    <string name = "enrol">등록</string>
     <string name="cancel">취소</string>
 </resources>

@@ -23,7 +23,7 @@
                 android:id = "@+id/fab_schedule"
                 android:layout_width = "wrap_content"
                 android:layout_height = "wrap_content"
-                app:backgroundTint = "#cc7aba"
+                app:backgroundTint = "#bbb8bc"
                 android:onClick = "@{viewModel::onWriteFABClick}"
                 android:src = "@drawable/ic_create_24dp"
                 app:fabSize = "normal"
