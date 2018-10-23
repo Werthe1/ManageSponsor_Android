@@ -1,35 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android = "http://schemas.android.com/apk/res/android"
-    xmlns:app = "http://schemas.android.com/apk/res-auto">
+        xmlns:app = "http://schemas.android.com/apk/res-auto">
 
     <data>
 
         <variable
-            name = "viewModel"
-            type = "jiyun.com.managesponsor.schedule.ScheduleViewModel" />
+                name = "viewModel"
+                type = "jiyun.com.managesponsor.schedule.ScheduleViewModel"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width = "match_parent"
-        android:layout_height = "match_parent"
-        android:paddingTop = "15dp">
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:paddingTop = "15dp">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id = "@+id/recycler_schedule"
-            android:layout_width = "match_parent"
-            android:layout_height = "match_parent" />
+                android:id = "@+id/recycler_schedule"
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id = "@+id/fab_schedule"
-            android:layout_width = "wrap_content"
-            android:layout_height = "wrap_content"
-            app:backgroundTint="#bf8437cc"
-            android:onClick = "@{viewModel::onWriteFABClick}"
-            android:src = "@drawable/ic_create_24dp"
-            app:fabSize = "normal"
-            app:layout_constraintBottom_toBottomOf = "parent"
-            app:layout_constraintEnd_toEndOf = "parent"
-            app:useCompatPadding = "true" />
-
+                android:id = "@+id/fab_schedule"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                app:backgroundTint = "#cc7aba"
+                android:onClick = "@{viewModel::onWriteFABClick}"
+                android:src = "@drawable/ic_create_24dp"
+                app:fabSize = "normal"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:useCompatPadding = "true"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
