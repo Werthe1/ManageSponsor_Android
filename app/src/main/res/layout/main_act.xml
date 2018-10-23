@@ -37,6 +37,8 @@
             android:layout_width = "match_parent"
             android:layout_height = "wrap_content"
             android:background = "@drawable/background_navi"
+            app:itemTextColor="@drawable/selector_navi"
+            app:itemIconTint="@drawable/selector_navi"
             app:itemTextAppearanceActive = "@style/BotNaviTextAppearanceActive"
             app:itemTextAppearanceInactive = "@style/BotNaviTextAppearance"
             app:layout_constraintBottom_toBottomOf = "parent"
