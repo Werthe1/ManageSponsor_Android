@@ -15,21 +15,27 @@ import jiyun.com.managesponsor.databinding.ScheduledetailFragBinding
 import java.util.*
 
 class ScheduleDetailFragment : DialogFragment() {
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        dialog.window
+                .attributes.windowAnimations = R.style.DialogAnimation
+    }
 
     private lateinit var binding: ScheduledetailFragBinding
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        return Dialog(this.context, R.style.PreviewDialogAnimation)
+        return Dialog(this.context)
     }
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.scheduledetail_frag, container, false)
         binding.today = Date()
+        binding.viewModel = this
 
         return binding.root
     }
-
 
     fun onCalendarClick() {
         openDatePicker()
