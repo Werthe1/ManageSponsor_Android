@@ -24,7 +24,7 @@ class ScheduleAdapter : RecyclerView.Adapter<ScheduleViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ScheduleViewHolder =
             ScheduleViewHolder(
                     LayoutInflater.from(parent.context)
-                            .inflate(R.layout.item_schedule, parent, false))
+                            .inflate(R.layout.schedule_item, parent, false))
 
 
     override fun onBindViewHolder(holder: ScheduleViewHolder, position: Int) {

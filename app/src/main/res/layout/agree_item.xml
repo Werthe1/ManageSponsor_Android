@@ -6,7 +6,6 @@
     >
     
     <data>
-        
         <variable
             name = "agree"
             type = "jiyun.com.managesponsor.data.Agreement"
@@ -17,12 +16,12 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width = "match_parent"
         android:layout_height = "wrap_content"
-        android:layout_marginBottom = "1dp"
+        android:layout_marginBottom = "2dp"
         android:background = "@android:color/white"
         android:paddingBottom = "5dp"
-        android:paddingEnd = "7dp"
-        android:paddingStart = "7dp"
-        android:paddingTop = "10dp"
+        android:paddingEnd = "10dp"
+        android:paddingStart = "10dp"
+        android:paddingTop = "8dp"
         >
         
         <TextView
@@ -32,7 +31,7 @@
             android:fontFamily = "@font/kopub_dotum_mid"
             android:text = "@{agree.sponsorName}"
             android:textColor = "@color/colorDefaultText"
-            android:textSize = "15sp"
+            android:textSize = "14sp"
             app:layout_constraintStart_toStartOf = "parent"
             app:layout_constraintTop_toTopOf = "parent"
             tools:text = "이지윤"
@@ -42,6 +41,7 @@
             android:id = "@+id/text_agree_pay_date"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
+            android:textColor="@color/colorGray"
             android:fontFamily = "@font/kopub_dotum_light"
             android:text = "@{String.format(@string/pay_day, agree.payDay)}"
             android:textSize = "12sp"
@@ -60,7 +60,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/text_agree_period"
             android:fontFamily = "@font/montserrat_light"
             android:textColor="@color/colorGray"
-            android:text = "@string/pay_period"
+            android:text = "@string/agree_period"
             />
         
         <TextView
@@ -69,10 +69,11 @@
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
             android:id="@+id/text_agree_period"
-            android:fontFamily = "@font/montserrat_light"
-            android:layout_marginTop="10dp"
+            android:fontFamily = "@font/kopub_dotum_light"
+            android:layout_marginTop="12dp"
             android:gravity="center"
-            android:textSize="14sp"
+            android:textSize="13sp"
+            android:layout_marginStart="3dp"
             android:textColor = "@color/colorDefaultText"
             app:layout_constraintTop_toBottomOf = "@+id/text_agree_name"
             app:layout_constraintStart_toEndOf = "@+id/text_agree_end_title"
@@ -81,9 +82,9 @@
     
     <TextView
         app:layout_constraintStart_toEndOf="@+id/text_agree_period"
-        android:textColor="@color/colorErr"
-        tools:text="만료 3일 전"
-        android:text="만료 3일 전"
+        android:textColor="#ccFF0000"
+        tools:text="만료까지 3일 전"
+        android:text="@{String.format(@string/expire_cnt, 3)}"
         android:textSize="12sp"
         android:fontFamily="@font/kopub_dotum_mid"
         android:layout_marginStart="10dp"

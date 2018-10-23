@@ -20,7 +20,7 @@ class LogAdapter  : RecyclerView.Adapter<LogViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LogViewHolder =
             LogViewHolder(
                     LayoutInflater.from(parent.context)
-                            .inflate(R.layout.item_log, parent, false))
+                            .inflate(R.layout.log_item, parent, false))
 
 
     override fun onBindViewHolder(holder: LogViewHolder, position: Int) {
